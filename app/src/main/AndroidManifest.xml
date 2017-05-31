@@ -25,9 +25,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivitySetting"/>
+        <activity android:name=".ActivitySetting">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
 
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".SearchActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
 
         //engineering
         <activity android:name=".ConverterActivities.VelocityAngularActivity"/>
