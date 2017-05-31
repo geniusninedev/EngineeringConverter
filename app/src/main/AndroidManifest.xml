@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nineinfosys.engineeringconverter">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.nineinfosys.engineeringconverter.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActivitySetting"/>
+
+        <activity android:name=".SearchActivity" />
+
+        //engineering
+        <activity android:name=".ConverterActivities.VelocityAngularActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionVelocityAngularListActivity" />
+        <activity android:name=".ConverterActivities.AccelerationActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionAccelerationListActivity" />
+        <activity android:name=".ConverterActivities.AccelerationAngularActivity"/>
+
+
+        <activity android:name=".ConverterActivitiesList.ConversionAccelerationAngularListActivity" />
+        <activity android:name=".ConverterActivities.SpecificVolumeActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionSpecificVolumeListActivity" />
+        <activity android:name=".ConverterActivities.DensityConverterActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionDensityConverterListActivity" />
+        <activity android:name=".ConverterActivities.MomentOfInertiaActivity"/>
+
+
+        <activity android:name=".ConverterActivitiesList.ConversionMomentOfInertiaListActivity" />
+        <activity android:name=".ConverterActivities.MomentofForceActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionMomentofForceListActivity" />
+        <activity android:name=".ConverterActivities.TorqueActivity"/>
+
+        <activity android:name=".ConverterActivitiesList.ConversionTorqueListActivity" />
+        <activity android:name=".ConverterActivitiesList.ConversionHardnessListActivity" />
+        <activity android:name=".ConverterActivities.HardnessActivity" />
+        <activity android:name=".ConverterActivitiesList.MetricWeightListActivity" />
+        <activity android:name=".ConverterActivities.MetricWeightConverterActivity" />
+        <activity android:name=".ConverterActivitiesList.MetrologyConverterListActivity" />
+        <activity android:name=".ConverterActivities.MetrologyUnitConverterActivity" />
+    </application>
+
+</manifest>
