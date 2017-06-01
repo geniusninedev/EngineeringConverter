@@ -585,6 +585,29 @@ public class SearchActivity extends AppCompatActivity implements TextWatcher {
                         torque();
                         break;
 
+                    //hardness
+                    case "German Degrees - °g":
+                        hardness();
+                        break;
+                    case "Parts/million - p/million":
+                        hardness();
+                        break;
+                    case "American Degrees - °a":
+                        hardness();
+                        break;
+                    case "Clark Degrees - °c":
+                        hardness();
+                        break;
+                    case "French Degrees - °f":
+                        hardness();
+                        break;
+                    case "Millieqv - millieqv":
+                        hardness();
+                        break;
+                    case "Milli Grams/gallon - mgr/gal":
+                        hardness();
+                        break;
+
                     //metric weight
                     case "Microgram - µg":
                         metricweight();
