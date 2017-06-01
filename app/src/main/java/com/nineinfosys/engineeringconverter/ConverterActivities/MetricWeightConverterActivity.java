@@ -31,6 +31,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.engineeringconverter.ConverterActivitiesList.MetricWeightListActivity;
 import com.nineinfosys.engineeringconverter.Engines.MetricWeightConverter;
 import com.nineinfosys.engineeringconverter.R;
@@ -85,6 +88,10 @@ public class MetricWeightConverterActivity extends AppCompatActivity implements 
         //keyboard hidden first time
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        MobileAds.initialize(MetricWeightConverterActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverter);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //initalization of tools and variables
         spinnerConvertFrom = (Spinner) findViewById(R.id.spinnerConvertFrom);
         spinnerConvertTo = (Spinner) findViewById(R.id.spinnerConvertTo);

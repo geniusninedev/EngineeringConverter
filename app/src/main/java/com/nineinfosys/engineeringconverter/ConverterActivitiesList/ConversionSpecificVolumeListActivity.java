@@ -31,6 +31,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.engineeringconverter.Engines.SpecificVolumeConverter;
 import com.nineinfosys.engineeringconverter.R;
 import com.nineinfosys.engineeringconverter.Supporter.ItemList;
@@ -75,7 +78,10 @@ public class ConversionSpecificVolumeListActivity extends AppCompatActivity impl
 
         //keyboard hidden first time
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
+        MobileAds.initialize(ConversionSpecificVolumeListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //customize toolbar
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#27d8d5")));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

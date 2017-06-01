@@ -23,6 +23,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.engineeringconverter.Engines.Hardness;
 import com.nineinfosys.engineeringconverter.R;
 import com.nineinfosys.engineeringconverter.Supporter.ItemList;
@@ -77,6 +80,10 @@ public class ConversionHardnessListActivity extends AppCompatActivity implements
         formatsetting();
 
 
+        MobileAds.initialize(ConversionHardnessListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         edittextConversionListvalue=(EditText)findViewById(R.id.edittextConversionListvalue) ;
         textconversionFrom=(TextView) findViewById(R.id.textViewConversionFrom) ;
         textViewConversionShortform=(TextView) findViewById(R.id.textViewConversionShortform) ;

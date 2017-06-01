@@ -31,6 +31,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.engineeringconverter.Engines.TorqueConverter;
 import com.nineinfosys.engineeringconverter.R;
 import com.nineinfosys.engineeringconverter.Supporter.ItemList;
@@ -88,7 +91,10 @@ public class ConversionTorqueListActivity extends AppCompatActivity implements T
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#0aa828"));
         }
-
+        MobileAds.initialize(ConversionTorqueListActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverterList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         //format of decimal pint
         formatsetting();
 

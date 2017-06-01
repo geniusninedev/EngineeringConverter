@@ -30,6 +30,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.engineeringconverter.ConverterActivitiesList.ConversionTorqueListActivity;
 import com.nineinfosys.engineeringconverter.Engines.TorqueConverter;
 import com.nineinfosys.engineeringconverter.R;
@@ -80,7 +83,10 @@ public class TorqueActivity extends AppCompatActivity implements View.OnClickLis
 
         formatsetting();
 
-
+        MobileAds.initialize(TorqueActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewUnitConverter);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         //keyboard hidden first time
